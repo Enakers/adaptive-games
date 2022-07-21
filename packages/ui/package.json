@@ -10,7 +10,9 @@
     "test": "vitest",
     "test:cov": "vitest --coverage"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react-icons": "^4.4.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.18.9",
     "@storybook/addon-actions": "^6.5.9",

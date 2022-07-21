@@ -5,7 +5,7 @@ module.exports = {
     es2021: true,
     node: true
   },
-  extends: ["airbnb", "airbnb-typescript", "prettier"],
+  extends: ["airbnb", "airbnb-typescript", "plugin:react/jsx-runtime", "prettier"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
@@ -29,5 +29,5 @@ module.exports = {
     "react/jsx-props-no-spreading": "off",
     "no-restricted-exports": "off"
   },
-  ignorePatterns: [".eslintrc.js", "commitlint.config.js"]
+  ignorePatterns: [".eslintrc.js", "commitlint.config.js", "dist"]
 };

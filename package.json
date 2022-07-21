@@ -12,5 +12,14 @@
     "npm": "please-use-yarn",
     "yarn": ">=1.22.0"
   },
-  "packageManager": "yarn@1.22.15"
+  "packageManager": "yarn@1.22.15",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "commitlint-config-monorepo": "^2.0.2",
+    "husky": "^8.0.1"
+  }
 }

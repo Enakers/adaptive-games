@@ -27,7 +27,14 @@ module.exports = {
     "import/no-extraneous-dependencies": "off",
     "react/require-default-props": "off",
     "react/jsx-props-no-spreading": "off",
-    "no-restricted-exports": "off"
+    "no-restricted-exports": "off",
+    "import/extensions": [2, "never", {css: "always", mjs: "always"}]
   },
-  ignorePatterns: [".eslintrc.js", "commitlint.config.js", "dist"]
+  ignorePatterns: [
+    ".eslintrc.js",
+    "commitlint.config.js",
+    "dist",
+    "tailwind.config.js",
+    "apps/literacy/src/server"
+  ]
 };

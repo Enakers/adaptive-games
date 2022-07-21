@@ -1,3 +1,1 @@
-const placeholder = "";
-
-export default placeholder;
+export * from "./SortableList";

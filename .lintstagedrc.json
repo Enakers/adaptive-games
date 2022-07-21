@@ -1,5 +1,5 @@
 {
-  "packages/ui/*.{js,ts,jsx,tsx}": ["eslint --fix"],
+  "packages/ui/**/*.{js,ts,jsx,tsx}": ["eslint --fix"],
   "apps/**/*.{js,ts,jsx,tsx}": ["eslint --fix"],
   "*.{js,cjs,mjs,ts,jsx,tsx,json,md}": ["prettier --write"]
 }

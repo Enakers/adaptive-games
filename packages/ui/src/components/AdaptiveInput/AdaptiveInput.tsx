@@ -16,13 +16,7 @@ export interface AdaptiveInputProps {
   dwellTime?: number;
 }
 
-export const AdaptiveInput = ({
-  onInput,
-  size,
-  type,
-  dwellTime = 1,
-  fixedPosition
-}: AdaptiveInputProps) => {
+const AdaptiveInput = ({onInput, size, type, dwellTime = 1, fixedPosition}: AdaptiveInputProps) => {
   const {circle, img} = useMemo(() => inputSizes[size], [size]);
   const {src, alt} = useMemo(() => imgProps[type], [type]);
   const innerCircle = useRef<HTMLDivElement>(null);
@@ -91,3 +85,5 @@ export const AdaptiveInput = ({
     </AdaptiveInputContainer>
   );
 };
+
+export default AdaptiveInput;

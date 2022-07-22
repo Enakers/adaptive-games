@@ -1,4 +1,4 @@
-type Store = WordListSlice;
+type Store = WordListSlice & ConfigSlice & GameSlice;
 
 interface WordListSlice {
   wordList: import("@prisma/client").WordList;
@@ -12,4 +12,18 @@ interface WordListSlice {
   updateWordList: (name: string) => Promise<void>;
   deleteWordList: (name: string) => Promise<void>;
   loadWordList: (wordList: import("@prisma/client").WordList) => void;
+}
+
+interface ConfigSlice {
+  touchscreen: boolean;
+  peakTime: number;
+  voice: SpeechSynthesisVoice | null;
+
+  toggleTouchscreen: () => void;
+  setPeakTime: (time: number) => void;
+  setVoice: (voice: SpeechSynthesisVoice) => void;
+}
+
+interface GameSlice {
+  speak: (word: string) => void;
 }

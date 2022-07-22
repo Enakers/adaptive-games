@@ -11,6 +11,11 @@ const Nav = ({className}: Props) => (
         <a href="dummy">Manage word lists</a>
       </Link>
     </li>
+    <li>
+      <Link href="/settings" passHref>
+        <a href="dummy">Settings</a>
+      </Link>
+    </li>
   </ul>
 );
 

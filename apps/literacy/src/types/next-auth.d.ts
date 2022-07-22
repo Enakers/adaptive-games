@@ -1,12 +1,13 @@
+import {WordList} from "@prisma/client";
 import {DefaultSession} from "next-auth";
 
 declare module "next-auth" {
-  /**
-   * Returned by `useSession`, `getSession` and received as a prop on the `SessionProvider` React Context
-   */
+  interface User extends DefaultSession.user {
+    wordLists: WordList[];
+  }
   interface Session {
-    user?: {
-      id?: string;
+    user: {
+      wordLists: WordList[];
     } & DefaultSession["user"];
   }
 }

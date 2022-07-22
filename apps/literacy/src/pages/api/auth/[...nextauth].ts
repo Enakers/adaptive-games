@@ -11,7 +11,15 @@ export const authOptions: NextAuthOptions = {
       clientId: env.GOOGLE_CLIENT_ID,
       clientSecret: env.GOOGLE_CLIENT_SECRET
     })
-  ]
+  ],
+  callbacks: {
+    session: ({session, user}) => {
+      // eslint-disable-next-line no-param-reassign
+      session.user = user;
+
+      return session;
+    }
+  }
 };
 
 export default NextAuth(authOptions);

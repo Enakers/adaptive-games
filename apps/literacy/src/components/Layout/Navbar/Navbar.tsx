@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import {HiMenuAlt1} from "react-icons/hi";
 import Nav from "./Nav";
+import UserDropdown from "./UserDropdown";
 
 const ThemeToggle = dynamic(import("./ThemeToggle"), {ssr: false});
 
@@ -27,6 +28,7 @@ const Navbar = () => (
     </div>
 
     <div className="navbar-end">
+      <UserDropdown />
       <ThemeToggle />
     </div>
   </div>

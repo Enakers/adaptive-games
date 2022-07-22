@@ -1,12 +1,15 @@
+import {useRouter} from "next/router";
 import {KeyboardEvent, useState} from "react";
 import {SortableList} from "ui";
 import {useStore} from "~/store";
 
 const WordList = () => {
-  const {wordList, setWords, addWord} = useStore(state => ({
+  const router = useRouter();
+  const {wordList, setWords, addWord, initGame} = useStore(state => ({
     wordList: state.wordList,
     setWords: state.setWords,
-    addWord: state.addWord
+    addWord: state.addWord,
+    initGame: state.initGame
   }));
   const [word, setWord] = useState("");
 
@@ -17,8 +20,23 @@ const WordList = () => {
     setWord("");
   };
 
+  const onStart = () => {
+    initGame();
+    router.push("/game");
+  };
+
   return (
     <div>
+      <div className="min-h-28">
+        {wordList.words.length > 0 && (
+          <div className="alert shadow-lg">
+            <button type="button" className="btn btn-primary btn-block btn-lg" onClick={onStart}>
+              Start
+            </button>
+          </div>
+        )}
+      </div>
+
       <label className="label flex flex-col items-start" htmlFor="word-input">
         <span className="label-text">Add word</span>
         <div>

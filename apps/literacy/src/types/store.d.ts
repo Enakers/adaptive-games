@@ -24,6 +24,21 @@ interface ConfigSlice {
   setVoice: (voice: SpeechSynthesisVoice) => void;
 }
 
+interface Result {
+  index: number;
+  tries: number;
+  word: string;
+}
+
 interface GameSlice {
+  gameFinished: boolean;
+  index: number;
+  tries: number;
+  results: Result[];
+  word: string;
+
   speak: (word: string) => void;
+  initGame: () => void;
+  handleCorrect: () => void;
+  handleIncorrect: () => void;
 }

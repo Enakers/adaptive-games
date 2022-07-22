@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.btn-xs-custom {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 0.75rem;
+}
+
+
 :root {
   --toastify-color-light: hsl(var(--b2));
   --toastify-color-dark: hsl(var(--b2));

@@ -33,7 +33,7 @@ const BaseListItem = ({
   return (
     <div
       ref={setNodeRef ?? SortableListItemOverlay}
-      className="my-6 p-4 bg-base-200 rounded-lg items-center shadow-lg flex justify-between"
+      className="my-6 p-4 bg-base-200 rounded-2xl items-center shadow-lg flex justify-between"
       style={style}
     >
       <span>{item.data}</span>

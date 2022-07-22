@@ -1,6 +1,6 @@
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import StorybookThemeToggle from "../../utils/StorybookThemeToggle";
-import {AdaptiveInput} from "./AdaptiveInput";
+import AdaptiveInput from "./AdaptiveInput";
 
 const componentMeta: ComponentMeta<typeof AdaptiveInput> = {
   component: AdaptiveInput,

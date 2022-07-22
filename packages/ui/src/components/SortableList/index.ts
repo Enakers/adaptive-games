@@ -1,2 +1,2 @@
-export {default as SortabLeList} from "./SortableList";
-export type {SortableItem} from "./SortableList.d";
+export {default as SortableList} from "./SortableList";
+export type {SortableItem} from "./SortableList.types";

@@ -13,7 +13,7 @@ import {
 import {arrayMove, SortableContext, verticalListSortingStrategy} from "@dnd-kit/sortable";
 import {useState} from "react";
 import ListItem from "./ListItem/ListItem";
-import {SortableItem} from "./SortableList.d";
+import {SortableItem} from "./SortableList.types";
 
 export interface SortableListProps {
   list: SortableItem[];

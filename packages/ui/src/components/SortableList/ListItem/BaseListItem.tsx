@@ -3,7 +3,7 @@ import {SyntheticListenerMap} from "@dnd-kit/core/dist/hooks/utilities";
 import {useCallback} from "react";
 import {AiOutlineClose} from "react-icons/ai";
 import {MdDragIndicator} from "react-icons/md";
-import {SortableItem} from "../SortableList.d";
+import {SortableItem} from "../SortableList.types";
 
 interface Props {
   item: SortableItem;

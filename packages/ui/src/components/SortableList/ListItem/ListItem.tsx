@@ -1,7 +1,7 @@
 import {UniqueIdentifier} from "@dnd-kit/core";
 import {defaultAnimateLayoutChanges, useSortable} from "@dnd-kit/sortable";
 import {CSS} from "@dnd-kit/utilities";
-import {SortableItem} from "../SortableList.d";
+import {SortableItem} from "../SortableList.types";
 import BaseListItem from "./BaseListItem";
 
 interface Props {

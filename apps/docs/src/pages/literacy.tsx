@@ -14,7 +14,7 @@ const Literacy = () => (
       <p className="prose mx-auto">
         Literacy app with support for touchscreens. User inputs words and starts the game. User then
         has to spell the word correctly to move to the next word. If help is needed you can hear the
-        word being spoken or take a peak at the word. After all words have been spelled correctly
+        word being spoken or take a peek at the word. After all words have been spelled correctly
         there is a stats page showing how many tries it took to guess correctly for each word.
       </p>
     </Section>
@@ -49,8 +49,8 @@ const Literacy = () => (
           )
         </p>
         <p>
-          When in the game You will see 2 buttons. Listen and Peak. Clicking listen will speak out
-          the word, clicking peak will show the word on the screen for some amount of time (as above
+          When in the game You will see 2 buttons. Listen and peek. Clicking listen will speek out
+          the word, clicking peek will show the word on the screen for some amount of time (as above
           defined in{" "}
           <a href="#settings" className="link">
             settings
@@ -86,9 +86,9 @@ const Literacy = () => (
     <Section id="settings" title="Settings">
       <SubSection imgSrc="/literacy/settings.png" imgAlt="settings page">
         <div>
-          <h3 className="text-xl font-semibold">Peak time</h3>
+          <h3 className="text-xl font-semibold">peek time</h3>
           <p>
-            Changes the amount of time the word stays on the screen when peak button is clicked.
+            Changes the amount of time the word stays on the screen when peek button is clicked.
           </p>
           <p>Options are:</p>
           <ul>
@@ -103,7 +103,7 @@ const Literacy = () => (
 
         <div className="mt-4">
           <h3 className="text-xl font-semibold">Touchscreen</h3>
-          <p>Toggles weather to use the on screen keyboard. Default is true</p>
+          <p>Toggles whether to use the on screen keyboard. Default is true</p>
         </div>
 
         <div className="mt-4">

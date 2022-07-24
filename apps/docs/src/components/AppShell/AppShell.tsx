@@ -6,7 +6,42 @@ import {HiOutlineMenuAlt1} from "react-icons/hi";
 
 const ThemeToggle = dynamic(() => import("./ThemeToggle"), {ssr: false});
 
-const SidebarMenu = () => <ul className="menu menu-compact flex flex-col p-0 px-4" />;
+const SidebarMenu = () => (
+  <ul className="menu menu-compact flex flex-col p-0 px-4">
+    <li className="menu-title">
+      <span>Literacy</span>
+    </li>
+    <li>
+      <Link href="/literacy#demo" passHref>
+        <a href="dummy" className="flex-gap-4">
+          Demo
+        </a>
+      </Link>
+    </li>
+    <li>
+      <Link href="/literacy#about" passHref>
+        <a href="dummy" className="flex-gap-4">
+          About
+        </a>
+      </Link>
+    </li>
+
+    <li>
+      <Link href="/literacy#usage" passHref>
+        <a href="dummy" className="flex-gap-4">
+          Usage
+        </a>
+      </Link>
+    </li>
+    <li>
+      <Link href="/literacy#settings" passHref>
+        <a href="dummy" className="flex-gap-4">
+          Settings
+        </a>
+      </Link>
+    </li>
+  </ul>
+);
 
 const AppShell: FC<{children: ReactNode}> = ({children}) => (
   <div className="drawer drawer-mobile">

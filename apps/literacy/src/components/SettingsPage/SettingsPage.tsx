@@ -5,8 +5,8 @@ const Voices = dynamic(import("./Voices"), {ssr: false});
 
 const SettingsPage = () => {
   const {peakTime, setPeakTime, touchscreen, toggleTouchscreen} = useStore(state => ({
-    peakTime: state.peakTime,
-    setPeakTime: state.setPeakTime,
+    peakTime: state.peekTime,
+    setPeakTime: state.setPeekTime,
     touchscreen: state.touchscreen,
     toggleTouchscreen: state.toggleTouchscreen
   }));
@@ -15,11 +15,11 @@ const SettingsPage = () => {
     <div className="max-w-2xl mx-auto">
       <h1 className="text-3xl text-center mb-4">Settings</h1>
 
-      <label className="label flex flex-col items-start" htmlFor="peak-time-select">
-        <span className="label-text">Select peak time</span>
+      <label className="label flex flex-col items-start" htmlFor="peek-time-select">
+        <span className="label-text">Select peek time</span>
         <select
           className="select select-bordered w-full"
-          id="peak-time-select"
+          id="peek-time-select"
           value={peakTime}
           onChange={e => setPeakTime(parseInt(e.target.value, 10))}
         >

@@ -7,15 +7,15 @@ import GuessInput from "./GuessInput";
 
 const GamePage = () => {
   const router = useRouter();
-  const {handleCorrect, handleIncorrect, index, wordList, gameFinished, word, speak, peakTime} =
+  const {handleCorrect, handleIncorrect, index, wordList, gameFinished, word, speak, peekTime} =
     useStore();
   const [correct, setCorrect] = useState<boolean | null>(null);
   const [showWord, setShowWord] = useState(false);
 
-  const peak = () => {
+  const peek = () => {
     setShowWord(true);
 
-    setTimeout(() => setShowWord(false), peakTime * 1000);
+    setTimeout(() => setShowWord(false), peekTime * 1000);
   };
 
   useEffect(() => {
@@ -23,11 +23,11 @@ const GamePage = () => {
   }, [gameFinished, router]);
 
   useEffect(() => {
-    if (peakTime === 0) setShowWord(true);
-    else peak();
+    if (peekTime === 0) setShowWord(true);
+    else peek();
 
     speak(word);
-  }, [word, peakTime]);
+  }, [word, peekTime]);
 
   const checkGuess = (isCorrect: boolean) => {
     setCorrect(isCorrect);
@@ -37,7 +37,7 @@ const GamePage = () => {
         handleCorrect();
       } else {
         handleIncorrect();
-        peak();
+        peek();
         speak(word);
       }
 
@@ -64,10 +64,10 @@ const GamePage = () => {
           <FaAssistiveListeningSystems />
           <span className="text-lg ml-4">Listen</span>
         </button>
-        {peakTime !== 0 && (
-          <button type="button" className="btn btn-md lg:btn-lg xl:btn-xl" onClick={peak}>
+        {peekTime !== 0 && (
+          <button type="button" className="btn btn-md lg:btn-lg xl:btn-xl" onClick={peek}>
             <FaEye />
-            <span className="text-lg ml-4">Peak</span>
+            <span className="text-lg ml-4">peek</span>
           </button>
         )}
       </div>

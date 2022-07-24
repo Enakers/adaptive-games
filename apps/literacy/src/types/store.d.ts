@@ -16,11 +16,11 @@ interface WordListSlice {
 
 interface ConfigSlice {
   touchscreen: boolean;
-  peakTime: number;
+  peekTime: number;
   voice: SpeechSynthesisVoice | null;
 
   toggleTouchscreen: () => void;
-  setPeakTime: (time: number) => void;
+  setPeekTime: (time: number) => void;
   setVoice: (voice: SpeechSynthesisVoice) => void;
 }
 

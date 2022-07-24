@@ -9,6 +9,7 @@ coverage
 out
 build
 dist
+docker_deploy.sh
 
 # debug
 yarn-error.log*

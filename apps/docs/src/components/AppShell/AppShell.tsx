@@ -20,7 +20,20 @@ const AppShell: FC<{children: ReactNode}> = ({children}) => (
     >
       <div className="sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content">
         <nav className="navbar">
-          <div className="navbar-start" />
+          <div className="navbar-start">
+            <label htmlFor="sidebar" className="btn btn-ghost drawer-button lg:hidden">
+              <HiOutlineMenuAlt1 />
+            </label>
+            <Link href="/" passHref>
+              <a
+                href="dummy"
+                className="btn btn-ghost normal-case text-xl lg:hidden"
+                aria-label="Home"
+              >
+                Adaptive Games Docs
+              </a>
+            </Link>
+          </div>
           <div className="navbar-end mr-2">
             <ThemeToggle />
           </div>
@@ -32,9 +45,6 @@ const AppShell: FC<{children: ReactNode}> = ({children}) => (
       <label htmlFor="sidebar" className="drawer-overlay" />
       <aside className="bg-base-200 w-80">
         <div className="z-20 bg-base-200 bg-opacity-90 backdrop-blur sticky top-0 items-center gap-2 px-4 py-2 hidden lg:flex shadow-sm">
-          <label htmlFor="sidebar" className="btn btn-ghost drawer-button lg:hidden">
-            <HiOutlineMenuAlt1 />
-          </label>
           <Link href="/" passHref>
             <a href="dummy" className="btn btn-ghost normal-case text-xl" aria-label="Home">
               Adaptive Games Docs

@@ -13,8 +13,6 @@ COPY /prisma ./prisma
 
 RUN yarn install --production=true
 
-RUN npx prisma generate
-
 EXPOSE 3000
 
 ENV PORT 3000
